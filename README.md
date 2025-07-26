@@ -9,7 +9,7 @@ This is my personal portfolio website built using **Flutter Web**, hosted on **F
 ## 📸 Screenshots
 
 ### 🖥️ Desktop View
-![Desktop Screenshot](screenshots/Screenshot_Desktop.png)
+![Desktop Screenshot](assets/images/me.png)
 
 ### 📱 Mobile View
 ![Mobile Screenshot](screenshots/Screenshot_Mobile.png)
