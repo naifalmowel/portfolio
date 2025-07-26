@@ -1,16 +1,54 @@
-# untitled
+# 💼 My Personal Portfolio - Flutter Developer
 
-A new Flutter project.
+This is my personal portfolio website built using **Flutter Web**, hosted on **Firebase Hosting**.
 
-## Getting Started
+## 📍 Live Website
 
-This project is a starting point for a Flutter application.
+🌐 [naifalmowel.web.app](https://naifalmowel.web.app)
 
-A few resources to get you started if this is your first Flutter project:
+## 📸 Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 🖥️ Desktop View
+![Desktop Screenshot](screenshots/Screenshot_Desktop.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 📱 Mobile View
+![Mobile Screenshot](screenshots/Screenshot_Mobile.png)
+
+### 🧑‍💼 About Sidebar
+![Sidebar Screenshot](screenshots/Screenshot_Sidebar.png)
+
+## 👨‍💻 About Me
+
+**Name:** Mohammad Naif Almowel  
+**Role:** Flutter Developer & IT Manager  
+**Email:** naif.almowel@gmail.com  
+**Phone:** +971 58 193 6696  
+**LinkedIn:** [@mohammad-naif-almowel](https://linkedin.com/in/mohammad-naif-almowel)  
+**GitHub:** [@naifalmowel](https://github.com/naifalmowel)
+
+## 🧠 Skills
+
+| Skill                 | Level |
+|----------------------|-------|
+| Flutter              | 70%   |
+| Dart                 | 90%   |
+| Firebase             | 60%   |
+| SQLite               | 85%   |
+| Responsive Design    | 80%   |
+| Clean Architecture   | 90%   |
+| BLoC                 | 50%   |
+| GetX                 | 93%   |
+
+## 📂 Project Structure
+
+- `lib/` → Flutter UI and logic
+- `build/web/` → Generated web files for deployment
+- `firebase.json` → Firebase Hosting config
+
+## 🚀 Deployment
+
+This site is deployed using Firebase Hosting:
+
+```bash
+flutter build web
+firebase deploy --only hosting:naifalmowel
