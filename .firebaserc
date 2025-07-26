@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "naifalmowel-82bd6"
+  },
+  "targets": {
+    "naifalmowel-82bd6": {
+      "hosting": {
+        "naifalmowel": [
+          "naifalmowel.web.app"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
