@@ -9,13 +9,13 @@ This is my personal portfolio website built using **Flutter Web**, hosted on **F
 ## 📸 Screenshots
 
 ### 🖥️ Desktop View
-![Desktop Screenshot](assets/images/me.png)
+![Desktop Screenshot](assets/desktop.png)
 
 ### 📱 Mobile View
-![Mobile Screenshot](screenshots/Screenshot_Mobile.png)
+![Mobile Screenshot](assets/mobile.png)
 
 ### 🧑‍💼 About Sidebar
-![Sidebar Screenshot](screenshots/Screenshot_Sidebar.png)
+![Sidebar Screenshot](assets/mobile1.png)
 
 ## 👨‍💻 About Me
 
