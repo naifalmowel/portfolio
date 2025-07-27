@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import '../../../res/constants.dart';
 import '../../../view model/responsive.dart';
-import 'animated_texts_componenets.dart';
+import 'animated_texts_components.dart';
 import 'combine_subtitle.dart';
 import 'description_text.dart';
 import 'download_button.dart';
@@ -27,17 +27,17 @@ class IntroBody extends StatelessWidget {
                 Row(
                   children: [
                     SizedBox(
-                      width: size.width * 0.23,
+                      width: size.width * 0.15,
                     ),
                     const AnimatedImageContainer(
-                      width: 150,
-                      height: 200,
+                      width: 250,
+                      height: 300,
                     ),
                   ],
                 ),
               if (!Responsive.isDesktop(context))
                 SizedBox(
-                  height: size.height * 0.1,
+                  height: size.height * 0.05,
                 ),
               const Responsive(
                   desktop: MyPortfolioText(start: 40, end: 50),
@@ -65,7 +65,7 @@ class IntroBody extends StatelessWidget {
           ),
         ),
         const Spacer(),
-        if (Responsive.isDesktop(context)) const AnimatedImageContainer(),
+        if (Responsive.isDesktop(context)) const AnimatedImageContainer(width: 300  , height: 400,),
         const Spacer()
       ],
     );

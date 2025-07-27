@@ -1,10 +1,11 @@
 import 'package:photo_view/photo_view.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/res/constants.dart';
 
 class ImageViewer {
   ImageViewer(BuildContext context, String image) {
     showGeneralDialog(
-      barrierColor: Colors.black,
+      barrierColor: bgColor,
       transitionDuration: Duration(milliseconds: 500),
       barrierDismissible: true,
       barrierLabel: 'Barrier',
@@ -13,16 +14,24 @@ class ImageViewer {
         return Center(
           child: Hero(
             tag: 'IMAGEVIEW',
-            child: Container(
+            child: SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               child: Scaffold(
-                backgroundColor: Colors.black,
+                backgroundColor: bgColor,
                 body: Container(
                     color: Colors.white,
-                    child: Center(
-                      child: PhotoView(imageProvider: AssetImage(image))
-                      ),
+                    child: Stack(alignment: Alignment.topRight,
+                      children: [
+                        Center(
+                          child: PhotoView(imageProvider: AssetImage(image))
+                          ),
+                        Padding(
+                          padding: const EdgeInsets.all(defaultPadding),
+                          child: IconButton(icon: Icon(Icons.close),color: color1,onPressed: (){Navigator.pop(context);},),
+                        )
+                      ],
+                    ),
                     )),
               ),
             ),

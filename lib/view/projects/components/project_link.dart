@@ -3,25 +3,52 @@ import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../model/project_model.dart';
+import '../../../res/constants.dart';
 
 class ProjectLinks extends StatelessWidget {
   final int index;
+
   const ProjectLinks({super.key, required this.index});
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Row(
           children: [
-            const Text('Check on Github',style: TextStyle(color: Colors.white),overflow: TextOverflow.ellipsis),
-            IconButton(onPressed: () {launchUrl(Uri.parse(projectList[index].link));}, icon: SvgPicture.asset('assets/icons/github.svg')),
+            TextButton(
+              onPressed: (){
+                launchUrl(Uri.parse(projectList[index].link));
+              },
+              child: Text(
+                'Check on Github',
+                style: TextStyle(color: color2),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            IconButton(
+              onPressed: () {
+                launchUrl(Uri.parse(projectList[index].link));
+              },
+              icon: SvgPicture.asset('assets/icons/github.svg'),
+            ),
           ],
         ),
         const Spacer(),
         TextButton(
-            onPressed: () {
-              launchUrl(Uri.parse(projectList[index].link));
-            }, child: const Text('Read More>>',overflow: TextOverflow.ellipsis,style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 10),))
+          onPressed: () {
+            launchUrl(Uri.parse(projectList[index].link));
+          },
+          child: const Text(
+            'Read More>>',
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              color: color3,
+              fontWeight: FontWeight.bold,
+              fontSize: 10,
+            ),
+          ),
+        ),
       ],
     );
   }

@@ -17,6 +17,7 @@ class CertificateStack extends StatelessWidget {
         controller.onHover(index, value);
       },
       onTap: () {
+        launchUrl(Uri.parse(certificateList[index].credential));
       },
       borderRadius: BorderRadius.circular(30),
       child: AnimatedContainer(
@@ -37,7 +38,7 @@ class CertificateStack extends StatelessWidget {
                       .textTheme
                       .bodyLarge!
                       .copyWith(
-                      color: Colors.white,
+                      color:color2,
                       fontWeight: FontWeight.bold),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
@@ -46,18 +47,18 @@ class CertificateStack extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(certificateList[index].organization,style: const TextStyle(color: Colors.amber),),
-                    Text(certificateList[index].date,style: const TextStyle(color: Colors.grey,fontSize: 12),),
+                    Text(certificateList[index].organization,style: const TextStyle(color: color3),),
+                    Text(certificateList[index].date,style: const TextStyle(color: Colors.black54,fontSize: 12),),
                   ],
                 ),
                 const SizedBox(height: defaultPadding/2,),
                 Text.rich(
                   maxLines: 1,
                   TextSpan(
-                      text: 'Skills : ',style: const TextStyle(color: Colors.white,),
+                      text: 'Skills : ',style: const TextStyle(color: color2,),
                       children: [
                         TextSpan(
-                          text: certificateList[index].skills,style: const TextStyle(color: Colors.grey,overflow: TextOverflow.ellipsis),)
+                          text: certificateList[index].skills,style: const TextStyle(color: Colors.black54,overflow: TextOverflow.ellipsis),)
                       ]
                   ),),
                 const SizedBox(height: defaultPadding,),
@@ -72,13 +73,14 @@ class CertificateStack extends StatelessWidget {
                         borderRadius: BorderRadius.circular(30),
                         gradient: LinearGradient(
                             colors: [
-                              Colors.pink,
-                              Colors.blue.shade900,
+                           color1,
+                              color2,
+                              color3,
                             ]
                         ),
                         boxShadow:const [
-                          BoxShadow(color: Colors.blue,offset: Offset(0, -1),blurRadius: 5),
-                          BoxShadow(color: Colors.red,offset: Offset(0, 1),blurRadius: 5),
+                          BoxShadow(color: color1,offset: Offset(0, -1),blurRadius: 5),
+                          BoxShadow(color: color2,offset: Offset(0, 1),blurRadius: 5),
                         ]
                     ),
                     child: const Row(

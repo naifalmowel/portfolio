@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../res/constants.dart';
+import '../../../view model/responsive.dart';
 
 class AnimatedLoadingText extends StatelessWidget {
   const AnimatedLoadingText({super.key});
@@ -8,7 +9,7 @@ class AnimatedLoadingText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: defaultPadding * 5,
+      width:Responsive.isDesktop(context)? defaultPadding * 10 : defaultPadding * 7,
       child: TweenAnimationBuilder(duration: const Duration(seconds: 2),builder: (context, value, child) => Column(
         children: [
           LinearProgressIndicator(
